@@ -16,21 +16,21 @@
   <meta name="author" content="Echo_Aran">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="阿里云服务器没有公网ip服务器有两个ip，公网和内网 如果在购买的时候没有选择带宽（即带宽为0），那么是不会给分配公网ip  算是阿里云的消费陷阱，因为公网ip要花钱卖  解决有两种办法  钞能力 更改套餐配置，将带宽改为4M  安全组设置阿里云和腾讯云差不多，进行端口号的放行时，首先要在安全组里设置，并且要手动在云服务的防火墙开启端口号才算成立  仅仅在安全组里设置端口号里设置是不行的！！！！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Quick Start">
-<meta property="og:url" content="https://echo-aran.github.io/2024/01/22/hello-world/index.html">
+<meta property="og:title" content="买阿里云服务器踩的坑以及端口号放行">
+<meta property="og:url" content="https://echo-aran.github.io/2024/02/17/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/index.html">
 <meta property="og:site_name" content="Echo-AranのBlogs">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="阿里云服务器没有公网ip服务器有两个ip，公网和内网 如果在购买的时候没有选择带宽（即带宽为0），那么是不会给分配公网ip  算是阿里云的消费陷阱，因为公网ip要花钱卖  解决有两种办法  钞能力 更改套餐配置，将带宽改为4M  安全组设置阿里云和腾讯云差不多，进行端口号的放行时，首先要在安全组里设置，并且要手动在云服务的防火墙开启端口号才算成立  仅仅在安全组里设置端口号里设置是不行的！！！！">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-21T16:43:03.383Z">
-<meta property="article:modified_time" content="2024-02-17T14:06:26.857Z">
+<meta property="article:published_time" content="2024-02-17T14:05:10.874Z">
+<meta property="article:modified_time" content="2024-02-17T14:16:19.135Z">
 <meta property="article:author" content="Echo_Aran">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hexo Quick Start - Echo-AranのBlogs</title>
+  <title>买阿里云服务器踩的坑以及端口号放行 - Echo-AranのBlogs</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hexo Quick Start"></span>
+            <span id="subtitle" data-typed-text="买阿里云服务器踩的坑以及端口号放行"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-22 00:43" pubdate>
-          2024年1月22日 凌晨
+        <time datetime="2024-02-17 22:05" pubdate>
+          2024年2月17日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          340 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -267,24 +267,38 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hexo Quick Start</h1>
+            <h1 id="seo-header">买阿里云服务器踩的坑以及端口号放行</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h2 id="阿里云服务器没有公网ip"><a href="#阿里云服务器没有公网ip" class="headerlink" title="阿里云服务器没有公网ip"></a>阿里云服务器没有公网ip</h2><p>服务器有两个ip，公网和内网</p>
+<p>如果在购买的时候没有选择带宽（即带宽为0），那么是不会给分配公网ip</p>
+<blockquote>
+<p>算是阿里云的消费陷阱，因为公网ip要花钱卖</p>
+</blockquote>
+<p><strong>解决有两种办法</strong></p>
+<ol>
+<li>钞能力</li>
+<li>更改套餐配置，将带宽改为4M</li>
+</ol>
+<h2 id="安全组设置"><a href="#安全组设置" class="headerlink" title="安全组设置"></a>安全组设置</h2><p>阿里云和腾讯云差不多，进行端口号的放行时，首先要在安全组里设置，并且要手动在云服务的防火墙开启端口号才算成立</p>
+<blockquote>
+<p>仅仅在安全组里设置端口号里设置是不行的！！！！</p>
+</blockquote>
+<p>防火墙相关操作如下</p>
+<h4 id="1、查看防火墙状态"><a href="#1、查看防火墙状态" class="headerlink" title="1、查看防火墙状态"></a>1、查看防火墙状态</h4><p>​	firewall-cmd –state</p>
+<h4 id="2、开启防火墙"><a href="#2、开启防火墙" class="headerlink" title="2、开启防火墙"></a>2、开启防火墙</h4><p>​	systemctl start firewalld.service</p>
+<h4 id="3、开启端口（以端口443为例）"><a href="#3、开启端口（以端口443为例）" class="headerlink" title="3、开启端口（以端口443为例）"></a>3、开启端口（以端口443为例）</h4><p>​	firewall-cmd –zone&#x3D;public –add-port&#x3D;443&#x2F;tcp –permanent命令</p>
+<blockquote>
+<p>–zone&#x3D;public表示作用域为公共的<br>–add-port&#x3D;443&#x2F;tcp添加tcp协议的端口端口号为443<br>–permanent永久生效，如果没有此参数，则只能维持当前 服 务生命周期内，重新启动后失效；</p>
+</blockquote>
+<h4 id="4、重启防火墙"><a href="#4、重启防火墙" class="headerlink" title="4、重启防火墙"></a>4、重启防火墙</h4><p>​	systemctl restart firewalld.service</p>
+<h4 id="5、重新载入防火墙"><a href="#5、重新载入防火墙" class="headerlink" title="5、重新载入防火墙"></a>5、重新载入防火墙</h4><p>​	firewall-cmd –reload</p>
+<h4 id="6、查看已开启的端口"><a href="#6、查看已开启的端口" class="headerlink" title="6、查看已开启的端口"></a>6、查看已开启的端口</h4><p>​	firewall-cmd –list-ports</p>
+<h4 id="7、关闭端口"><a href="#7、关闭端口" class="headerlink" title="7、关闭端口"></a>7、关闭端口</h4><p>​	firewall-cmd –zone&#x3D;public –remove-port&#x3D;8080&#x2F;tcp –permanent</p>
+<pre><code class="hljs"> 重复第4、5步操作，即可成功关闭
+</code></pre>
 
                 
               </div>
@@ -302,8 +316,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hexo Quick Start</div>
-      <div>https://echo-aran.github.io/2024/01/22/hello-world/</div>
+      <div>买阿里云服务器踩的坑以及端口号放行</div>
+      <div>https://echo-aran.github.io/2024/02/17/阿里云服务器购买和端口号/</div>
     </div>
     <div class="license-meta">
       
@@ -315,7 +329,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月22日</div>
+          <div>2024年2月17日</div>
         </div>
       
       
@@ -347,15 +361,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/22/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/" title="Spring常用注解">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Spring常用注解</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2024/01/22/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/" title="Spring常用注解">
+                        <span class="hidden-mobile">Spring常用注解</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

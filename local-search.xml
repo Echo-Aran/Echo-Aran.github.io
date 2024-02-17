@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>买阿里云服务器踩的坑以及端口号放行</title>
+    <link href="/2024/02/17/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/"/>
+    <url>/2024/02/17/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7/</url>
+    
+    <content type="html"><![CDATA[<h2 id="阿里云服务器没有公网ip"><a href="#阿里云服务器没有公网ip" class="headerlink" title="阿里云服务器没有公网ip"></a>阿里云服务器没有公网ip</h2><p>服务器有两个ip，公网和内网</p><p>如果在购买的时候没有选择带宽（即带宽为0），那么是不会给分配公网ip</p><blockquote><p>算是阿里云的消费陷阱，因为公网ip要花钱卖</p></blockquote><p><strong>解决有两种办法</strong></p><ol><li>钞能力</li><li>更改套餐配置，将带宽改为4M</li></ol><h2 id="安全组设置"><a href="#安全组设置" class="headerlink" title="安全组设置"></a>安全组设置</h2><p>阿里云和腾讯云差不多，进行端口号的放行时，首先要在安全组里设置，并且要手动在云服务的防火墙开启端口号才算成立</p><blockquote><p>仅仅在安全组里设置端口号里设置是不行的！！！！</p></blockquote><p>防火墙相关操作如下</p><h4 id="1、查看防火墙状态"><a href="#1、查看防火墙状态" class="headerlink" title="1、查看防火墙状态"></a>1、查看防火墙状态</h4><p>​firewall-cmd –state</p><h4 id="2、开启防火墙"><a href="#2、开启防火墙" class="headerlink" title="2、开启防火墙"></a>2、开启防火墙</h4><p>​systemctl start firewalld.service</p><h4 id="3、开启端口（以端口443为例）"><a href="#3、开启端口（以端口443为例）" class="headerlink" title="3、开启端口（以端口443为例）"></a>3、开启端口（以端口443为例）</h4><p>​firewall-cmd –zone&#x3D;public –add-port&#x3D;443&#x2F;tcp –permanent命令</p><blockquote><p>–zone&#x3D;public表示作用域为公共的<br>–add-port&#x3D;443&#x2F;tcp添加tcp协议的端口端口号为443<br>–permanent永久生效，如果没有此参数，则只能维持当前 服 务生命周期内，重新启动后失效；</p></blockquote><h4 id="4、重启防火墙"><a href="#4、重启防火墙" class="headerlink" title="4、重启防火墙"></a>4、重启防火墙</h4><p>​systemctl restart firewalld.service</p><h4 id="5、重新载入防火墙"><a href="#5、重新载入防火墙" class="headerlink" title="5、重新载入防火墙"></a>5、重新载入防火墙</h4><p>​firewall-cmd –reload</p><h4 id="6、查看已开启的端口"><a href="#6、查看已开启的端口" class="headerlink" title="6、查看已开启的端口"></a>6、查看已开启的端口</h4><p>​firewall-cmd –list-ports</p><h4 id="7、关闭端口"><a href="#7、关闭端口" class="headerlink" title="7、关闭端口"></a>7、关闭端口</h4><p>​firewall-cmd –zone&#x3D;public –remove-port&#x3D;8080&#x2F;tcp –permanent</p><pre><code class="hljs"> 重复第4、5步操作，即可成功关闭</code></pre>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Spring常用注解</title>
     <link href="/2024/01/22/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/"/>
     <url>/2024/01/22/Spring%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/</url>
@@ -17,7 +30,7 @@
   
   
   <entry>
-    <title>Hello World</title>
+    <title>Hexo Quick Start</title>
     <link href="/2024/01/22/hello-world/"/>
     <url>/2024/01/22/hello-world/</url>
     
